@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- Title and description -->
-<title>Babylon — Backing founders moving culture</title>
-<meta name="description" content="A pre-seed fund for founders building what is technically hard and culturally scary. Bits, atoms, cells.">
+<title>Babylon — Backing founders moving culture.</title>
+<meta name="description" content="A pre-seed fund for founders pushing the technical and cultural frontiers across atoms, bits, and cells.">
 <meta name="author" content="Babylon">
 <link rel="canonical" href="https://babylon.vc/">
 
@@ -20,8 +20,8 @@
 <!-- Open Graph (Facebook, LinkedIn, Slack, iMessage, etc.) -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://babylon.vc/">
-<meta property="og:title" content="Babylon — Backing founders moving culture">
-<meta property="og:description" content="A pre-seed fund for founders building what is technically hard and culturally scary. Bits, atoms, cells.">
+<meta property="og:title" content="Babylon — Backing founders moving culture.">
+<meta property="og:description" content="A pre-seed fund for founders pushing the technical and cultural frontiers across atoms, bits, and cells.">
 <meta property="og:image" content="https://babylon.vc/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -32,8 +32,8 @@
 <!-- Twitter / X -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:url" content="https://babylon.vc/">
-<meta name="twitter:title" content="Babylon — Backing founders moving culture">
-<meta name="twitter:description" content="A pre-seed fund for founders building what is technically hard and culturally scary. Bits, atoms, cells.">
+<meta name="twitter:title" content="Babylon — Backing founders moving culture.">
+<meta name="twitter:description" content="A pre-seed fund for founders pushing the technical and cultural frontiers across atoms, bits, and cells.">
 <meta name="twitter:image" content="https://babylon.vc/og-image.png">
 <meta name="twitter:image:alt" content="Babylon — backing founders moving culture">
 
@@ -230,12 +230,11 @@
   }
 
   .hero-tagline {
-    font-family: 'Fraunces', serif;
-    font-variation-settings: "opsz" 144, "SOFT" 50;
+    font-family: 'Playfair Display', serif;
     font-size: clamp(44px, 6.8vw, 96px);
-    line-height: 0.92;
-    font-weight: 400;
-    letter-spacing: -0.035em;
+    line-height: 0.95;
+    font-weight: 500;
+    letter-spacing: -0.02em;
     color: var(--ink);
     margin-bottom: 0;
   }
@@ -323,7 +322,7 @@
 
   .thesis-body h2 {
     font-family: 'Fraunces', serif;
-    font-size: clamp(36px, 4.5vw, 64px);
+    font-size: clamp(44px, 5.5vw, 80px);
     line-height: 1.05;
     font-weight: 400;
     letter-spacing: -0.02em;
@@ -387,10 +386,10 @@
 
   .portfolio-title {
     font-family: 'Fraunces', serif;
-    font-size: clamp(48px, 6.5vw, 96px);
-    line-height: 1;
+    font-size: clamp(44px, 5.5vw, 80px);
+    line-height: 1.05;
     font-weight: 400;
-    letter-spacing: -0.03em;
+    letter-spacing: -0.02em;
     margin-bottom: 20px;
   }
 
@@ -414,7 +413,7 @@
     display: grid;
     grid-template-columns: 280px 1fr;
     gap: 60px;
-    align-items: baseline;
+    align-items: center;
   }
   .category:last-child {
     border-bottom: 1px solid var(--hairline-strong);
@@ -488,9 +487,10 @@
   .dinner {
     padding-top: 140px;
     padding-bottom: 140px;
-    text-align: center;
     border-top: 0.5px solid var(--hairline);
   }
+
+  .dinner-body { text-align: center; }
 
   .dinner-stamp {
     display: inline-block;
@@ -508,12 +508,17 @@
   .dinner-title {
     font-family: 'Playfair Display', serif;
     font-style: italic;
-    font-size: clamp(56px, 9vw, 130px);
-    line-height: 0.95;
-    color: var(--vermillion);
+    font-size: clamp(44px, 5.5vw, 80px);
+    line-height: 1.05;
+    color: var(--ink);
     font-weight: 500;
     letter-spacing: 0.005em;
     margin-bottom: 36px;
+  }
+
+  .dinner-title em {
+    color: var(--vermillion);
+    font-style: italic;
   }
 
   .dinner-divider {
@@ -602,6 +607,68 @@
     font-style: normal;
   }
 
+  .contact-card {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 28px;
+    padding-bottom: 28px;
+    border-bottom: 0.5px solid var(--hairline);
+  }
+
+  .contact-photo {
+    width: 96px;
+    height: 96px;
+    object-fit: cover;
+    object-position: 50% 30%;
+    border-radius: 4px;
+    flex-shrink: 0;
+    display: block;
+  }
+
+  .contact-card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    min-width: 0;
+  }
+
+  .contact-name {
+    font-family: 'Fraunces', serif;
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--ink);
+    letter-spacing: -0.015em;
+    line-height: 1.1;
+  }
+
+  .contact-socials {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink);
+  }
+
+  .contact-socials a {
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 0.5px solid transparent;
+    padding-bottom: 1px;
+    transition: color 0.3s ease, border-color 0.3s ease;
+  }
+
+  .contact-socials a:hover {
+    color: var(--vermillion);
+    border-bottom-color: var(--vermillion);
+  }
+
+  .contact-socials-sep {
+    display: inline-block;
+    margin: 0 8px;
+    color: var(--brass);
+  }
+
   /* ============ FOOTER ============ */
   footer {
     padding: 28px 48px;
@@ -660,8 +727,9 @@
 
   /* ============ RESPONSIVE ============ */
   @media (max-width: 720px) {
-    .nav-inner { padding: 14px 24px; }
-    .nav-links { gap: 18px; }
+    .nav-inner { padding: 14px 20px; }
+    .nav-links { gap: 22px; }
+    .nav-links a:nth-child(1),
     .nav-links a:nth-child(3) { display: none; }
     section { padding: 0 24px; }
     .hero { padding-top: 90px; min-height: auto; }
@@ -673,6 +741,11 @@
     .hero-logo img {
       width: 117px;
       max-width: 117px;
+    }
+    .hero-tagline {
+      font-size: clamp(34px, 9.2vw, 46px);
+      line-height: 1;
+      letter-spacing: -0.025em;
     }
     .nav-mark-text { font-size: 18px; }
     .nav-mark img { height: 24px; width: 24px; }
@@ -704,6 +777,9 @@
       gap: 32px;
       align-items: start;
     }
+    .contact-photo { width: 80px; height: 80px; }
+    .contact-card { gap: 14px; margin-bottom: 22px; padding-bottom: 22px; }
+    .contact-name { font-size: 19px; }
     footer {
       padding: 20px 24px;
       flex-direction: column;
@@ -745,7 +821,7 @@
       </div>
       <div class="hero-rule"></div>
       <div class="hero-prose-wrap">
-        <p class="hero-prose">A pre-seed fund for founders building what is <strong>technically hard and culturally scary</strong>. Across bits, atoms, and cells.</p>
+        <p class="hero-prose">A pre-seed fund for founders pushing both the <strong>technical and cultural frontiers</strong>. Across atoms, bits, and cells.</p>
       </div>
     </div>
     <span class="scroll-cue">Scroll &darr;</span>
@@ -760,17 +836,18 @@
           <div class="thesis-aside-label">The thesis</div>
         </aside>
         <div class="thesis-body">
-          <div class="eyebrow reveal">Why Babylon, why now</div>
-          <h2 class="reveal">Culture is moving <em>upstream</em> of technology.</h2>
-          <p class="reveal reveal-delay-1">For most of the last century, technology arrived first and culture caught up. That order has reversed. Networked publics now have <strong>structural veto power</strong> over what gets built &mdash; they decide what is permitted, who is funded, which companies get hired into.</p>
-          <p class="reveal reveal-delay-2">The founders building the most important technologies of the next decade &mdash; the ones simultaneously hard to engineer and culturally contested &mdash; need cultural permission long before they need product-market fit.</p>
+          <div class="eyebrow reveal">Why Babylon</div>
+          <h2 class="reveal">The <em>Dual Frontier.</em></h2>
+          <p class="reveal reveal-delay-1">With AGI on the horizon, society is <strong>violently fracturing</strong>. The 0.1% top talent has become existential, searching for a mission worth bleeding for. Meanwhile, the 99.9% public is turning nihilistic, revolting against an industry they no longer trust.</p>
+          <p class="reveal reveal-delay-2">To survive, the best founders must now push <strong>two frontiers simultaneously</strong>: the technical one just to avoid being killed by the next models, and the cultural one to craft a meaningful narrative to talent, VCs, regulators, and the public.</p>
+          <p class="reveal reveal-delay-2">Me? I'm not technical, but I'm cultural. I help founders on narrative with one core belief: <strong>PR is dead</strong> and the public no longer trusts legacy media. Founders must go direct and build their voice alongside narrative allies who have skin in the game: the creators.</p>
 
           <blockquote class="pullquote reveal reveal-delay-1">
-            Narrative capital is an asset class. It compounds like financial capital, like talent, like reputation. Most pre-seed investors still misprice it.
+            Culture has moved upstream of technology. Narrative capital has become an asset class that compounds like financial, human &amp; social capital.
             <span class="pullquote-attrib">&mdash; The fund hypothesis</span>
           </blockquote>
 
-          <p class="reveal">Babylon is the first city where engineers and storytellers coexisted at scale. Ziggurats and cuneiform. Infrastructure and myth. The fund is named for that tension &mdash; because the tension is the whole thesis.</p>
+          <p class="reveal">Hence, Babylon. It was the first ancient metropolis where culture and technology worked together at scale. Raising the massive Ziggurats meant nothing without writing the Epic of Gilgamesh to give human ambition meaning. Building the machine is no longer enough. <strong>You have to write the myth.</strong></p>
         </div>
       </div>
     </div>
@@ -779,15 +856,39 @@
   <!-- PORTFOLIO -->
   <section class="portfolio" id="portfolio">
     <div class="container">
-      <div class="portfolio-header reveal">
-        <div class="eyebrow" style="justify-content: center;">II &mdash; The portfolio</div>
-        <h2 class="portfolio-title">Bits, atoms, <em>cells.</em></h2>
-        <p class="portfolio-sub">Three frontiers. One thesis.</p>
-      </div>
+      <div class="thesis-grid">
+        <aside class="thesis-aside reveal">
+          <div class="thesis-aside-num">II.</div>
+          <div class="thesis-aside-label">The portfolio</div>
+        </aside>
+        <div class="portfolio-body">
+          <div class="portfolio-header reveal">
+            <h2 class="portfolio-title">Atoms, bits, <em>cells.</em></h2>
+            <p class="portfolio-sub">Three frontiers. One thesis.</p>
+          </div>
 
       <div class="category reveal">
         <div class="category-meta">
           <span class="category-num">01</span>
+          <h3 class="category-name">Atoms</h3>
+          <p class="category-desc">hardware,<br>energy, matter</p>
+        </div>
+        <div class="category-companies">
+          <a href="https://dynamoair.com/" target="_blank" rel="noopener">dynamo air</a>
+          <a href="https://eridale.com/" target="_blank" rel="noopener">eridale</a>
+          <a href="https://apolloatomics.com/" target="_blank" rel="noopener">apollo atomics</a>
+          <a href="https://orionsleep.com/" target="_blank" rel="noopener">orion</a>
+          <a href="https://starlife.ai/" target="_blank" rel="noopener">starlife</a>
+          <a href="https://x.com/vightaero" target="_blank" rel="noopener">vight</a>
+          <a href="https://minervahumanoids.com/" target="_blank" rel="noopener">minerva</a>
+          <a href="https://kickback.world/" target="_blank" rel="noopener">kickback</a>
+          <a href="https://enoughsafety.com/" target="_blank" rel="noopener">enough</a>
+        </div>
+      </div>
+
+      <div class="category reveal">
+        <div class="category-meta">
+          <span class="category-num">02</span>
           <h3 class="category-name">Bits</h3>
           <p class="category-desc">software,<br>intelligence</p>
         </div>
@@ -807,25 +908,6 @@
 
       <div class="category reveal">
         <div class="category-meta">
-          <span class="category-num">02</span>
-          <h3 class="category-name">Atoms</h3>
-          <p class="category-desc">hardware,<br>energy, matter</p>
-        </div>
-        <div class="category-companies">
-          <a href="https://dynamoair.com/" target="_blank" rel="noopener">dynamo air</a>
-          <a href="https://eridale.com/" target="_blank" rel="noopener">eridale</a>
-          <a href="https://apolloatomics.com/" target="_blank" rel="noopener">apollo atomics</a>
-          <a href="https://orionsleep.com/" target="_blank" rel="noopener">orion</a>
-          <a href="https://starlife.ai/" target="_blank" rel="noopener">starlife</a>
-          <a href="https://x.com/vightaero" target="_blank" rel="noopener">vight</a>
-          <a href="https://minervahumanoids.com/" target="_blank" rel="noopener">minerva</a>
-          <a href="https://kickback.world/" target="_blank" rel="noopener">kickback</a>
-          <a href="https://enoughsafety.com/" target="_blank" rel="noopener">enough</a>
-        </div>
-      </div>
-
-      <div class="category reveal">
-        <div class="category-meta">
           <span class="category-num">03</span>
           <h3 class="category-name">Cells</h3>
           <p class="category-desc">biology,<br>life</p>
@@ -837,18 +919,27 @@
           <a href="https://kangaroo.bio/" target="_blank" rel="noopener">kangaroo bio</a>
         </div>
       </div>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- DINNERS -->
   <section class="dinner" id="dinners">
-    <div class="container-narrow">
-      <span class="dinner-stamp reveal">Babylon Dinner Series &middot; biweekly &middot; SF</span>
-      <h2 class="dinner-title reveal reveal-delay-1">The Babylon<br>Dinners.</h2>
-      <div class="dinner-divider reveal reveal-delay-2"></div>
-      <p class="dinner-prose reveal reveal-delay-2">Twenty-five seats. <em>One long candlelit table.</em> Frontier founders and the storytellers, communicators, and writers building the public language for what they are making.</p>
-      <p class="dinner-prose reveal reveal-delay-3">Middle Eastern shared plates. Beeswax candles. Conversation that does not end at eleven.</p>
-      <p class="dinner-meta reveal reveal-delay-3">By invitation &mdash; write to be considered.</p>
+    <div class="container">
+      <div class="thesis-grid">
+        <aside class="thesis-aside reveal">
+          <div class="thesis-aside-num">III.</div>
+          <div class="thesis-aside-label">The dinners</div>
+        </aside>
+        <div class="dinner-body">
+          <h2 class="dinner-title reveal reveal-delay-1">The <em>Babylon</em><br>Dinners.</h2>
+          <div class="dinner-divider reveal reveal-delay-2"></div>
+          <p class="dinner-prose reveal reveal-delay-2">I bring 25 people together around <em>one long candlelit banquet table</em>, connecting frontier founders directly with the creators building the public language for the future.</p>
+          <p class="dinner-prose reveal reveal-delay-3">Over Middle Eastern shared plates, we strip away the corporate scripts for unvarnished, deep conversation that does not end at eleven.</p>
+          <p class="dinner-meta reveal reveal-delay-3">By invitation &mdash; write to be considered.</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -856,10 +947,19 @@
   <section class="contact" id="contact">
     <div class="container">
       <div class="contact-grid">
-        <h2 class="contact-title reveal">If you are building something <em>technically hard and culturally scary</em> &mdash; write.</h2>
+        <h2 class="contact-title reveal">If you are pushing the <em>dual frontier</em> &mdash; write.</h2>
         <div class="contact-details reveal reveal-delay-1">
+          <div class="contact-card">
+            <img class="contact-photo" src="hugo.jpg" alt="Hugo Amsellem" />
+            <div class="contact-card-body">
+              <div class="contact-name">Hugo Amsellem</div>
+              <div class="contact-socials">
+                <a href="https://x.com/hugoamsellem" target="_blank" rel="noopener">X</a><span class="contact-socials-sep">&middot;</span><a href="https://www.linkedin.com/in/hugoamsellem" target="_blank" rel="noopener">LinkedIn</a>
+              </div>
+            </div>
+          </div>
           <a class="contact-link" href="mailto:hugo@babylon.vc">hugo@babylon.vc</a><br>
-          <a class="contact-link" href="https://babylon.co/letters">babylon.co &middot; letters</a>
+          <a class="contact-link" href="https://internetculture.co" target="_blank" rel="noopener">babylon.vc letters</a>
           <span class="contact-meta">San Francisco</span>
         </div>
       </div>
