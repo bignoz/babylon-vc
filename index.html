@@ -99,7 +99,9 @@
     background-repeat: no-repeat;
     opacity: 0;
     will-change: opacity;
-    transition: opacity 0.15s linear;
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
   }
   .bg-layer[data-section="contact"] {
     background-position: center bottom;
@@ -133,11 +135,10 @@
     line-height: 1;
   }
   .nav-mark-text {
-    font-family: 'Fraunces', serif;
-    font-variation-settings: "opsz" 144, "SOFT" 30;
+    font-family: 'Playfair Display', serif;
     font-size: 24px;
     font-weight: 400;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.015em;
     color: var(--ink);
   }
   .nav-mark img {
@@ -697,7 +698,7 @@
   /* ============ FOOTER ============ */
   footer {
     padding: 28px 48px;
-    border-top: 1.5px solid var(--ink);
+    border-top: 0.5px solid var(--hairline);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1047,6 +1048,7 @@
       contact:   document.querySelector('.contact')
     };
 
+    const lastOpacity = {};
     function update() {
       const vh = window.innerHeight;
       const vc = vh / 2;
@@ -1057,10 +1059,11 @@
         const r = el.getBoundingClientRect();
         const center = r.top + r.height / 2;
         const distance = Math.abs(center - vc);
-        // Fade range = half the section height + a bit of viewport on either side.
-        // The smaller this is, the snappier the crossfade.
         const range = (r.height / 2) + (vh * 0.55);
         const opacity = Math.max(0, Math.min(1, 1 - distance / range));
+        // Skip DOM writes when change is < 1% — cuts repaints dramatically on iOS
+        if (Math.abs((lastOpacity[name] ?? -1) - opacity) < 0.01) return;
+        lastOpacity[name] = opacity;
         layer.style.opacity = opacity.toFixed(3);
       });
     }
