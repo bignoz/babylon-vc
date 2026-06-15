@@ -1,6 +1,13 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/deck",
+      "destination": "https://docsend.com/view/ruzyc3vyk353z2ft",
+      "permanent": false
+    }
+  ],
   "headers": [
     {
       "source": "/(favicon-32x32.png|favicon-192x192.png|apple-touch-icon.png|favicon.ico|og-image.png|og-image.jpg|babylon-logo.png)",
@@ -11,6 +18,13 @@
     {
       "source": "/index.html",
       "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
+      ]
+    },
+    {
+      "source": "/memo",
+      "headers": [
+        { "key": "X-Robots-Tag", "value": "noindex, nofollow" },
         { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
       ]
     }
