@@ -95,12 +95,12 @@ NEVER use Inter, Helvetica, Roboto, system sans, or any geometric sans. Site fai
 
 ## Page structure (current)
 
-1. **Nav** (fixed, parchment with backdrop blur) — `[coin logo] babylon` left, nav links right, contained at 1180px max-width matching body.
+1. **Nav** (fixed, parchment with backdrop blur) — `[coin logo] babylon` left, nav links right (Thesis, Portfolio, Dinners, Letters, Contact), contained at 1180px max-width matching body.
 2. **Hero** — `[coin logo] backing founders / moving culture.` in one inline row, then a vermillion rule, then prose underneath spanning wider.
 3. **Thesis** — sticky aside with Roman numeral I., body column with header "Culture is moving *upstream* of technology.", a vermillion-bordered pullquote, three paragraphs.
 4. **Portfolio** — three category blocks: Bits / Atoms / Cells. Companies listed inline with brass `·` separators (CSS pseudo-element, flex-wrap responsive).
 5. **Dinners** — centered. Stamp + huge italic vermillion title + gold divider + prose.
-6. **Contact** — two-column, asymmetric, `hugo@babylon.vc` and `babylon.co · letters`.
+6. **Contact** — two-column, asymmetric, `hugo@babylon.vc` and `babylon.vc letters` (links to letters.babylon.vc).
 7. **Footer** — full-width black-rule top, three columns.
 
 ---
@@ -160,7 +160,7 @@ When making changes to this site:
 
 - Swap Google Fonts (Fraunces, Playfair Display, Lora) for licensed Canela + Tiempos Text (~$400-600 one-time) before serious LP outreach.
 - Generate the painterly oil image deck (10 hero / interior / feast images) and weave them into hero, between sections, and in the dinner section.
-- Babylon Letters (publication, formerly internetculture.co) — separate site at `babylon.co/letters`, not part of this repo.
+- Babylon Letters (publication, formerly internetculture.co) lives on Substack at `letters.babylon.vc` (CNAME at Gandi, since 2026-10-26), not in this repo. `vercel.json` redirects `/letters/*` there; internetculture.co and hugo.pm redirect through Cloudflare.
 - Email setup at `hugo@babylon.vc` — Google Workspace recommended, separate from website hosting.
 
 ---
