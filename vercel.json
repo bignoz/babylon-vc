@@ -7,6 +7,11 @@
       "destination": "https://docsend.com/view/ruzyc3vyk353z2ft",
       "permanent": false
     },
+    {
+      "source": "/memo(.html)?",
+      "destination": "https://docsend.com/view/ruzyc3vyk353z2ft",
+      "permanent": false
+    },
     { "source": "/letters/:slug(consumerfrontier|consumermanifesto|consumerplus|culturefightsback|fatwrappers|how-to-invest-in-creators|mapping-the-creator-economy|middletail|the-creator-lifecycle|the-definition-of-a-creator|the-loneliness-economy|thesocialrenaissance|web3-is-ai-not-crypto)", "destination": "https://letters.babylon.vc/p/:slug", "permanent": true },
     { "source": "/letters/:path*", "destination": "https://letters.babylon.vc/:path*", "permanent": false }
   ],
@@ -20,13 +25,6 @@
     {
       "source": "/index.html",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
-      ]
-    },
-    {
-      "source": "/memo",
-      "headers": [
-        { "key": "X-Robots-Tag", "value": "noindex, nofollow" },
         { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
       ]
     }
