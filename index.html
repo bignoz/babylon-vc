@@ -775,8 +775,9 @@
 
   /* ============ RESPONSIVE ============ */
   @media (max-width: 720px) {
-    .nav-inner { padding: 14px 20px; }
-    .nav-links { gap: 22px; }
+    .nav-inner { padding: 14px 20px; gap: 18px; }
+    .nav-links { gap: 18px; }
+    .nav-links a { letter-spacing: 0.12em; }
     .nav-links a:nth-child(1),
     .nav-links a:nth-child(3) { display: none; }
     section { padding: 0 24px; }
@@ -784,14 +785,14 @@
     .hero-top {
       flex-direction: row;
       align-items: center;
-      gap: 14px;
+      gap: 12px;
     }
     .hero-logo img {
-      width: 66px;
-      max-width: 66px;
+      width: 56px;
+      max-width: 56px;
     }
     .hero-tagline {
-      font-size: clamp(26px, 7vw, 36px);
+      font-size: clamp(22px, 6.2vw, 30px);
       line-height: 1.02;
       letter-spacing: -0.015em;
     }
