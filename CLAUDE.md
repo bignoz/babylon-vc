@@ -9,7 +9,7 @@ This file is read automatically by Claude Code at the start of every session. It
 `babylon.vc` — the website for **Babylon**, a pre-seed venture fund based in San Francisco run by Hugo Amsellem. The site is a single static `index.html` deployed to Vercel, with assets (favicons, OG image, logo) sitting alongside.
 
 **Tagline:** "backing founders moving culture."
-**Mood reference:** "warm empire, after midnight." (Style direction only — never appears as visible copy on the site.)
+**Design source of truth:** the brand layer in OS V2 (`~/os-v2/brand/`, `docs/BRAND.md`, `bin/os brand show`). The old mood line "warm empire, after midnight" is obsolete (Hugo, 2026-10-27).
 
 The fund invests in narrative-intensive frontier technology — companies that are simultaneously hard to engineer and culturally contested. Bits, atoms, cells.
 
@@ -52,7 +52,7 @@ The fund invests in narrative-intensive frontier technology — companies that a
 
 1. **Classical display (default)** — `Fraunces` from Google Fonts, weight 400, letter-spacing -0.02em. Used for ~90% of headlines.
 2. **Theatrical wildcard (sparingly)** — `Playfair Display` italic, weight 500, always vermillion. Used for the wildcard moments only — e.g. "moving culture." in the hero, "upstream" in the thesis. If you reach for it, ask whether the moment earns it.
-3. **Body workhorse** — `Lora`, 15-19px, line-height 1.55-1.65.
+3. **Body workhorse** — `Newsreader`, 15-19px, line-height 1.55-1.65 (replaced Lora on 2026-10-27, same face as the deck).
 4. **Metadata labels** — `JetBrains Mono`, 10-11px, letter-spacing 0.15-0.22em, uppercase.
 
 NEVER use Inter, Helvetica, Roboto, system sans, or any geometric sans. Site fails the moment it looks SaaS-ish.
@@ -60,7 +60,7 @@ NEVER use Inter, Helvetica, Roboto, system sans, or any geometric sans. Site fai
 ### Voice rules
 
 **Always:**
-- Lowercase in casual copy. Sentence case in formal copy. Both are alive.
+- Sentence case for headlines and subtitles (a capital on the first word, Hugo 2026-10-27). The wordmark `babylon` stays lowercase.
 - Short paragraphs, one idea per paragraph.
 - Bold key phrases as reading anchors via `<strong>` (gets the gold underline gradient).
 - Concrete and visceral over conceptual ("technically hard and culturally scary" > "narrative-first deep tech").
@@ -108,14 +108,13 @@ NEVER use Inter, Helvetica, Roboto, system sans, or any geometric sans. Site fai
 ## Decisions already made (do not relitigate)
 
 - **Order is atoms → bits → cells.** Always. Do not reorder to bits-first or cells-first.
-- **No "warm empire, after midnight" anywhere visible on site.** It's the style brief, not a tagline.
 - **No "VC" in the wordmark or nav.** Just "babylon."
 - **Apex serves the site, www redirects to apex.** Set in Vercel domains.
 - **No mechanics/numbers section.** The 23 portfolio companies are the proof.
 - **Logo is base64-embedded inline.** Single-file HTML deploys cleanly.
 - **WebP for embedded logos, PNG for the standalone logo file.**
 - **Whole-body `zoom: 1.25` is applied to the body** for overall scale. Hugo asked for this explicitly to match how he reads the site at +25% browser zoom.
-- **Logo sits LEFT of the tagline in the hero**, sized to match the two-line tagline height (`width: clamp(104px, 16.25vw, 234px)` after the 30% bump).
+- **Logo sits LEFT of the tagline in the hero, on the same line, on desktop and phones** (optician test 2026-10-27), sized to match the two-line tagline height (`width: clamp(104px, 16.25vw, 234px)` after the 30% bump).
 - **Wordmark + logo in nav**: text first, logo second was wrong. Logo first, then text — same as hero.
 
 ---
@@ -155,6 +154,10 @@ When making changes to this site:
 5. **When in doubt, default to restraint.** Babylon's brand is built on holding two things in tension (scholar + hedonist). The page reads correctly only when ~80% of it feels civilized. The hedonist energy is the punctuation, not the foundation.
 
 ---
+
+## Separators
+
+Under the hero tagline and the dinners title: a gold hairline with the eight-petal rosette at its centre (`.rosette`, brand asset `rosette`). One per section at most.
 
 ## Open / future work
 
